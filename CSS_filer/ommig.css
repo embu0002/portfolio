@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #eeeaea;
+}
+/********************************************* TEKST ******************************************/
+.cv_overskrift {
+  font-size: 3rem;
+  font-family: "Cabin";
+  font-weight: 100;
+  margin-top: 2rem;
+}
+h2 {
+  margin-top: 1rem;
+  font-family: "Yanone Kaffeesatz";
+  font-size: 1.6rem;
+  font-weight: 350;
+  padding-top: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Cabin";
+  font-weight: 100;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+h4 {
+  font-family: "Yanone Kaffeesatz";
+  font-size: 2rem;
+  font-weight: 350;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/********************************************* SLIDE SHOW ******************************************/
+
+.slideshow {
+  display: flex;
+  white-space: nowrap; /* Gør at slideshowet ikke kører udenfor rammen */
+  gap: 10px;
+  animation: slide 40s linear infinite;
+}
+
+.slideshow_ommig {
+  overflow: hidden;
+}
+
+.slideshow img {
+  width: 200px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/********************************************* CV/PORTRÆT ******************************************/
+.grid_1-1_portræt {
+  text-align: center;
+}
+.cv_liste ul {
+  list-style-type: none;
+  font-family: "Roboto Slab", serif;
+  margin-top: 0.3rem;
+  line-height: 22px;
+  font-weight: 350;
+  font-size: 0.9rem;
+}
+.order {
+  width: 70%;
+  margin-top: 2.5rem;
+}
+
+/********************************************* DESKTOP ******************************************/
+@media (min-width: 600px) {
+  .ommig_container {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .slideshow_ommig {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    pointer-events: auto;
+    overflow: hidden;
+  }
+  .slideshow {
+    display: flex;
+    white-space: nowrap; /* Gør at slideshowet ikke kører udenfor rammen */
+    gap: 10px;
+    animation: slide 40s linear infinite;
+  }
+
+  .slideshow img {
+    width: 300px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 4rem;
+    gap: 20px;
+    background-color: #ccc5b9;
+    z-index: 2;
+    padding: 30px;
+    position: relative;
+  }
+
+  .grid_1-1_portræt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 17rem;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    place-items: center;
+  }
+
+  .cv_liste ul {
+    list-style-type: none;
+    font-family: "Roboto Slab", serif;
+    margin-top: 0.3rem;
+    line-height: 22px;
+    font-weight: 350;
+    font-size: 0.9rem;
+  }
+  .order {
+    width: 70%;
+    order: 1;
+  }
+  .grid_1-1_portræt > .order {
+    order: -1;
+  }
+
+  h4 {
+    font-family: "Yanone Kaffeesatz";
+    font-size: 2rem;
+    font-weight: 350;
+    text-align: center;
+  }
+}

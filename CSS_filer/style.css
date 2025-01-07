@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+main {
+  background-color: #eeeaea;
+  max-width: 1500px;
+  margin: auto;
+}
+body {
+  background-color: #eeeaea;
+  max-width: 1500px;
+  margin: auto;
+}
+
+/********************************************* TEKST FONTE ******************************************/
+h3 {
+  font-family: "Yanone Kaffeesatz";
+  font-weight: 350;
+  font-size: 1.5rem;
+}
+p {
+  font-family: "Roboto Slab", serif;
+  margin: 1.5rem;
+  line-height: 22px;
+  font-weight: 350;
+  font-size: 0.9rem;
+}
+.footer_p {
+  font-family: "Roboto Slab" !important;
+  color: black; /* Testfarve */
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.overskrift {
+  text-align: center;
+}
+header {
+  z-index: 10;
+}
+.href_header {
+  text-decoration: none;
+  color: #000;
+}
+@media (min-width: 600px) {
+  .footer_p {
+    font-family: "Roboto Slab" !important;
+    color: black;
+    line-height: 5px;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+}
+
+/******************************************** HEADER *********************************************/
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 99999;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+}
+
+.menu a:hover {
+  color: #ccc5b9;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #333333;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+
+/********************************************* DESKTOP ******************************************/
+
+@media screen and (max-width: 1800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+  }
+  nav.active .menu {
+    display: block;
+    background-color: #941b0c;
+    position: fixed;
+    top: 94px;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+
+/******************************************** FOOTER *********************************************/
+.logo_footer {
+  width: 70%;
+}
+
+.footer {
+  color: #000;
+  background-color: #941b0c;
+  height: 300px;
+}
+.footer_section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem;
+  padding-top: 3rem;
+  color: #000;
+}
+.grid_2 {
+  gap: 24px;
+  display: grid;
+}
+
+.fa-brands {
+  color: #000; /* Gør ikon sort */
+}
+.grid_3 {
+  margin-right: 6rem;
+}
+
+/********************************************* DESKTOP ******************************************/
+
+@media (min-width: 600px) {
+  .logo_footer {
+    width: 40%;
+  }
+  .grid_2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-top: 17px;
+    align-items: center;
+  }
+  .footer_section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Roboto Slab", serif;
+    height: 150px;
+    margin: 0.5rem;
+  }
+  .grid_3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-right: 10rem;
+  }
+  .footer {
+    color: #000;
+    background-color: #941b0c;
+    height: 200px;
+  }
+}

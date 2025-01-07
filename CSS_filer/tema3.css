@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Cabin";
+  font-weight: 200;
+  margin-top: 2rem;
+}
+
+h2 {
+  font-family: "Yanone Kaffeesatz";
+  font-size: 2rem;
+  font-weight: 350;
+  padding-top: 0.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #eeeaea;
+}
+
+/********************************************* KNAP ******************************************/
+.atag_knap {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+.sesite_knap {
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+  padding: 15px 22px;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  margin-left: 24px;
+  margin-bottom: 2rem;
+}
+.sesite_knap:hover {
+  background-color: transparent;
+  border: 2px solid #941b0c;
+  color: #941b0c;
+}
+
+/********************************************* DESKTOP ******************************************/
+@media (min-width: 600px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+  .grid_1-1_order {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .grid_1-1_order > .order {
+    order: 1;
+  }
+}

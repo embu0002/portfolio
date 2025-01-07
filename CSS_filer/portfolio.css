@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #eeeaea;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Cabin";
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+h2 {
+  font-family: "Yanone Kaffeesatz";
+  font-size: 2rem;
+  font-weight: 350;
+  padding-top: 0.5rem;
+  text-align: center;
+}
+/********************************************* PORTFOLIO ******************************************/
+.container {
+  position: relative;
+  border: 2px solid black;
+  border-radius: 2px;
+  overflow: hidden; /* Sørg for at indholdet holder sig indenfor desktop layout */
+}
+/********************************************* HOVEREFFEKT ******************************************/
+.image {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Skjuler billedet */
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+  z-index: 2; /* Sørger for, at billedet vises over overlayet ved hover */
+}
+
+.container:hover .image {
+  opacity: 1; /* Viser billedet ved hovereffekten */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #941b0c;
+  z-index: 1; /* Overlay skal være bagved billedet ved hovereffekten */
+  transition: opacity 0.5s ease;
+  padding: 20px;
+}
+
+.overlay_1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ccc5b9;
+  z-index: 1; /* Overlay skal være bagved billedet ved hovereffekten */
+  transition: opacity 0.5s ease;
+  padding: 20px;
+}
+
+.container:hover .overlay {
+  opacity: 0; /* Skjul overlayet ved hovereffekten */
+}
+/********************************************* TEKST I CONTAINER ******************************************/
+.text {
+  position: relative;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  text-align: center;
+  z-index: 3; /* Sørger for, at teksten er foran alt andet */
+}
+.tekst_p {
+  position: relative;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  z-index: 3; /* Sørger for, at teksten er foran alt andet */
+}
+.grid_1-1 {
+  display: grid;
+  gap: 10px;
+}
+p.tekst_p {
+  text-align: center;
+  top: 5px;
+  font-size: 1.5rem;
+}
+h2.tekst_p {
+  bottom: 0.5rem;
+  font-size: 2rem;
+  text-align: center;
+  right: 18px;
+}
+
+/********************************************* DESKTOP ******************************************/
+@media (min-width: 600px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  p.tekst_p {
+    text-align: center;
+    left: -6px;
+    top: 5px;
+    font-size: 1.5rem;
+  }
+  h2.tekst_p {
+    bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    right: 18px;
+  }
+}
