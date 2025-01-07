@@ -36,7 +36,7 @@ p {
 }
 .footer_p {
   font-family: "Roboto Slab" !important;
-  color: black; /* Testfarve */
+  color: black;
   line-height: 20px;
   font-weight: 400;
   font-size: 0.9rem;
@@ -195,7 +195,7 @@ nav {
   color: #000; /* Gør ikon sort */
 }
 .grid_3 {
-  margin-right: 6rem;
+  margin-right: 4rem;
 }
 
 /********************************************* DESKTOP ******************************************/

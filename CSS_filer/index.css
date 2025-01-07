@@ -47,6 +47,8 @@ h2 {
 }
 
 /********************************************* SLIDESHOW ******************************************/
+/* Har brugt position, for at placere mine elementer rigtig ovenpå hinanden */
+/* z-index gør det muligt at placere elementer ovenpå hinanden og forblive der */
 .hero_container {
   position: relative;
   width: 100%;
@@ -56,7 +58,7 @@ h2 {
   position: relative;
   padding: 20px;
   z-index: 1;
-  overflow: visible;
+  overflow: visible; /* Gør at indholdet ikke forsvinder, hvis det går udenfor grænsen  */
 }
 .slideshow_container {
   position: absolute;
@@ -100,9 +102,9 @@ h2 {
   align-items: center;
   gap: 50px;
   margin-top: 13rem;
-  margin-bottom: 16rem;
-  margin-right: 4rem;
-  margin-left: 4rem;
+  margin-bottom: 10rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 #portfolio_knap {
@@ -187,6 +189,6 @@ h2 {
   .slideshow img {
     width: 350px;
     height: auto;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Gør at elementet ikke krymper */
   }
 }
