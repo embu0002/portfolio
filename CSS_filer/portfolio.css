@@ -98,6 +98,7 @@ h2 {
 .container:hover .overlay {
   opacity: 0; /* Skjul overlayet ved hovereffekten */
 }
+
 /********************************************* TEKST I CONTAINER ******************************************/
 .text {
   position: relative;
@@ -117,6 +118,7 @@ h2 {
 .grid_1-1 {
   display: grid;
   gap: 10px;
+  margin-bottom: 2rem;
 }
 p.tekst_p {
   text-align: center;
@@ -140,6 +142,7 @@ h2.tekst_p {
     justify-content: center;
     margin-left: 4rem;
     margin-right: 4rem;
+    margin-bottom: 2rem;
   }
 
   p.tekst_p {
